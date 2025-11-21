@@ -1,1 +1,6 @@
 .env
+.gradio/
+.idea/
+.venv/
+chroma_db_new/
+.ipynb_checkpoints/
