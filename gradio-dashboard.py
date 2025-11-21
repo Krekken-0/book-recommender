@@ -84,7 +84,7 @@ categories = ["All"] + ["Children's Fiction", "Children's Nonfiction", "Fiction"
 tones = ["All"] + ["Happy", "Surprising", "Angry", "Suspenseful", "Sad"]
 
 with gr.Blocks(theme = gr.themes.Glass()) as dashboard:
-    gr.Markdown("# Semantic Book Recommender")
+    gr.Markdown("# Prosper Needs")
 
     with gr.Row():
         user_query = gr.Textbox(label = "Please enter a description of a book:",
@@ -98,7 +98,7 @@ with gr.Blocks(theme = gr.themes.Glass()) as dashboard:
     submit_button = gr.Button("Find recommendations")
 
     gr.Markdown("## Recommendations")
-    output = gr.Gallery(label = "Recommended books", columns = None, rows = 4, container=True, object_fit='scale-down',
+    output = gr.Gallery(label = "Recommended books", columns = 5, rows = 4, container=True, object_fit='scale-down',
                         show_fullscreen_button=False,)
 
     submit_button.click(fn = recommend_books,
